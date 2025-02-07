@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var closeBtn = document.getElementsByClassName('close')[0];
     var thumbnails = document.getElementsByClassName('thumbnail');
     var donateImg = document.querySelector('img[alt="donate"]');
-    var qrImageSrc = 'https://fikreraza.vercel.app/images/demo.svg'; // Change this to your actual QR code image path
+    var qrImageSrc = './images/demo.svg'; // Change this to your actual QR code image path
     var currentIndex;
 
     function openModal(index) {
