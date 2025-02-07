@@ -40,6 +40,14 @@ body {
     transform: scale(1.1);
 }
 
+#donateBtn{
+  background-color: #fff;
+   color: #000;
+  border: none; 
+  padding: 4px;
+  border-radius: 10px;;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -122,4 +130,5 @@ body {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
 
