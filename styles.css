@@ -39,7 +39,9 @@ body {
 .thumbnail:hover {
     transform: scale(1.1);
 }
-
+.mobile{
+    border-radius: 200px;
+}
 #donateBtn{
   background-color: #fff;
    color: #000;
