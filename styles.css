@@ -48,6 +48,14 @@ body {
   border-radius: 10px;;
 }
 
+    .qr-image {
+        width: 350px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+
 .modal {
     display: none;
     position: fixed;
