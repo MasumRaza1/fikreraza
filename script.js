@@ -4,13 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var captionText = document.getElementById('caption');
     var closeBtn = document.getElementsByClassName('close')[0];
     var thumbnails = document.getElementsByClassName('thumbnail');
+    var donateImg = document.querySelector('img[alt="donate"]');
+    var qrImageSrc = './images/demo.svg'; // Change this to your actual QR code image path
     var currentIndex;
 
     function openModal(index) {
+        if (index === 'donate') {
+            modalImg.src = qrImageSrc;
+            captionText.innerHTML = 'Scan to Donate';
+        } else {
+            modalImg.src = thumbnails[index].src;
+            captionText.innerHTML = thumbnails[index].alt;
+            currentIndex = index;
+        }
         modal.style.display = 'block';
-        modalImg.src = thumbnails[index].src;
-        captionText.innerHTML = thumbnails[index].alt;
-        currentIndex = index;
     }
 
     function closeModal() {
@@ -31,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
         thumbnail.addEventListener('click', function() {
             openModal(index);
         });
+    });
+
+    donateImg.addEventListener('click', function() {
+        openModal('donate');
     });
 
     closeBtn.addEventListener('click', closeModal);
